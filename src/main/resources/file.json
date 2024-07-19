@@ -1,0 +1,61 @@
+[{
+  "user_id": "11",
+  "activity_date": "2024-07-18",
+  "activity_type": "ONBOARDING",
+  "duration_minutes": "30"
+}, {
+  "user_id": "12",
+  "activity_date": "2024-07-17",
+  "activity_type": "RUNNING",
+  "duration_minutes": "20"
+}, {
+  "user_id": "13",
+  "activity_date": "2024-07-18",
+  "activity_type": "JOGGING",
+  "duration_minutes": "25"
+}, {
+  "user_id": "14",
+  "activity_date": "2024-07-18",
+  "activity_type": "DANCING",
+  "duration_minutes": "30"
+}, {
+  "user_id": "21",
+  "activity_date": "2024-07-17",
+  "activity_type": "RUNNING",
+  "duration_minutes": "20"
+}, {
+  "user_id": "31",
+  "activity_date": "2024-07-18",
+  "activity_type": "JOGGING",
+  "duration_minutes": "25"
+}, {
+  "user_id": "41",
+  "activity_date": "2024-07-18",
+  "activity_type": "DANCING",
+  "duration_minutes": "30"
+}, {
+  "user_id": "42",
+  "activity_date": "2024-07-18",
+  "activity_type": "DANCING",
+  "duration_minutes": "30"
+}, {
+  "user_id": "22",
+  "activity_date": "2024-07-17",
+  "activity_type": "RUNNING",
+  "duration_minutes": "20"
+}, {
+  "user_id": "32",
+  "activity_date": "2024-07-18",
+  "activity_type": "JOGGING",
+  "duration_minutes": "25"
+}, {
+  "user_id": "42",
+  "activity_date": "2024-07-18",
+  "activity_type": "DANCING",
+  "duration_minutes": "30"
+}, {
+  "user_id": "43",
+  "activity_date": "2024-07-18",
+  "activity_type": "DANCING",
+  "duration_minutes": "30"
+}]
