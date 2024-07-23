@@ -3,6 +3,7 @@ package com.example.bigquerydemo.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.cloud.bigquery.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Files;
@@ -15,11 +16,12 @@ import java.util.stream.Collectors;
 public class BigQueryService {
 
     private final BigQuery bigQuery;
-    private final ObjectMapper jacksonObjectMapper;
+    @Autowired
+    private final ObjectMapper objectMapper;
 
-    public BigQueryService(ObjectMapper jacksonObjectMapper) {
+    public BigQueryService(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
         bigQuery = BigQueryOptions.getDefaultInstance().getService();
-        this.jacksonObjectMapper = jacksonObjectMapper;
     }
 
     public void createDataset(String datasetName) {
@@ -100,7 +102,7 @@ public class BigQueryService {
         try {
             // Read the local JSON file
             String jsonContent = new String(Files.readAllBytes(Paths.get(localFilePath)));
-            List<Map<String, Object>> dataList = jacksonObjectMapper.readValue(jsonContent, new TypeReference<List<Map<String, Object>>>() {});
+            List<Map<String, Object>> dataList = objectMapper.convertValue(jsonContent, new TypeReference<List<Map<String, Object>>>() {});
 
             // Use the existing insertListData method to insert the data
             return insertListData(datasetName, tableName, dataList);
